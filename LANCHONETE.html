@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Henzo - Lanchonete</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var menu1,lanche2,menu3,menu4,menu5,menu6,conta7,
+		m1=0,m2=0,m3=0,p1=0,p2=0,p3=0,p4=0,b1=0,b2=0,b3=0,b4=0,l1=0,l2=0,l3=0,l4=0,b5=0,total=0;
+		do{
+			menu1=parseInt(prompt("LACHONETE YIN YANG"+"\n"+"\n"+"1-Lanches"+"\n"+"2-Pizzas"+"\n"+"3-MilkShak"+"\n"+"4-Bebidas"+"\n"+"6-Conta"+"\n"+"0-Voltar"));
+			if(menu1==1){
+				do{
+					lanche2=parseInt(prompt("LANCHES:"+"\n"+"\n"+"1-X-tudo R$ 10,00:"+"\n"+"\n"+"2-X-Egg 7,00"+"\n"+"Ovos, Queijo provolone, Cheiro verde, Sal, Pimenta, Maionese, Tomates."+"\n"+"\n"+"3-X-Salada R$ 5,00"+"\n"+"Hambúrguer, Fatias de queijo provolone, Fatias de tomate, Alface a gosto, Maionese (sabor de sua preferência), Pão de hambúrguer."+"\n"+"\n"+"4-X-Bauru R$ 4,00"+"\n"+"Hambúrguer, Presunto, Queijo, Tomates, Pão Françes."+"\n"+"\n"+"0-Voltar"));
+					switch(lanche2){
+						case 1:
+						l1++;
+						break;
+						case 2:
+						l2++;
+						break;
+						case 3:
+						l3++;
+						break;
+						case 4:
+						l4++;
+						break;
+					}
+				}while(lanche2!=0);
+			}else if(menu1==4){
+				do{
+					menu3=parseInt(prompt("BEBIDAS:"+"\n"+""+"\n"+"1-Coca Cola R$ 8,00"+"\n"+"2-Guarana 7,00"+"\n"+"3-Fanta R$ 6,00"+"\n"+"4-Tubaina R$ 5,00"+"\n"+"5-Soda R$ 6,00"+"\n"+"0-Voltar"));
+					switch(menu3){
+						case 1:
+						b1++;
+						break;
+						case 2:
+						b2++;
+						break;
+						case 3:
+						b3++;
+						break;
+						case 4:
+						b4++;
+						break;
+						case 5:
+						b5++;
+						break;
+					}
+				}while(menu3!=0);
+			}else if(menu1==2){
+				do{
+					menu5=parseInt(prompt("PIZZAS:"+"\n"+""+"\n"+"1-Mussarela R$ 22,00"+"\n"+"Queijo mussarela e Tomates."+"\n"+"\n"+"2-Calabresa 20,00"+"\n"+"Calabresa e Cebola."+"\n"+"\n"+"3-Frango c/ Catupiry R$ 25,00"+"\n"+"Frango e Catupiry."+"\n"+"\n"+"4-Portuguesa R$ 25,00"+"\n"+"Queijo mussarela, Presunto, Tomates, Ovo cozido, Cebola."+"\n"+"\n"+"0-Voltar"));
+					switch(menu5){
+						case 1:
+						p1++;
+						break;
+						case 2:
+						p2++;
+						break;
+						case 3:
+						p3++;
+						break;
+						case 4:
+						p4++;
+						break;	
+					}
+				}while(menu5!=0);
+			}else if(menu1==3){
+				do{
+					menu6=parseInt(prompt("MILKSHAK:"+"\n"+""+"\n"+"1-Chocolate R$ 12,00"+"\n"+"2-Morango 12,00"+"\n"+"3-Leite Ninho c/ Nutela R$ 15,00"+"\n"+"0-Voltar"));
+					switch(menu6){
+						case 1:
+						m1++;
+						break;
+						case 2:
+						m2++;
+						break;
+						case 3:
+						m3++;
+						break;	
+					}
+				}while(menu6!=0);
+			}else if(menu1==6){
+				document.write("Lista de pedidos:<br><br>");
+				if (l1>0){
+					document.write(+l1+" X-Tudo= "+l1*10+" reais<br>");
+					total=total+l1*10;
+				}
+				if (l2>0){
+					document.write(+l2+" X-Egg= "+l2*7+" reais<br>");
+					total=total+l2*7;
+				}
+				if (l3>0){
+					document.write(+l3+" X-Salada= "+l3*5+" reais<br>");
+					total=total+l3*5;
+				}
+				if (l4>0){
+					document.write(+l4+" X-Bauru= "+l4*4+" reais<br>");
+					total=total+l4*4;
+				}
+				if (b1>0){
+					document.write(+b1+" Coca cola= "+b1*8+" reais<br>");
+					total=total+b1*8;
+				}
+				if (b2>0){
+					document.write(+b2+" Guarana= "+b2*7+" reais<br>");
+					total=total+b2*7;
+				}
+				if (b3>0){
+					document.write(+b3+" Fanta= "+b3*6+" reais<br>");
+					total=total+b3*6;
+				}
+				if (b4>0){
+					document.write(+b4+" Tubaina= "+b4*5+" reais<br>");
+					total=total+b4*5;
+				}
+				if (b5>0){
+					document.write(+b5+" Soda= "+b5*6+" reais<br>");
+					total=total+b5*6;
+				}
+				if (p1>0){
+					document.write(+p1+" Pizza (mussarela)= "+p1*22+" reais<br>");
+					total=total+p1*22;
+				}
+				if (p2>0){
+					document.write(+p2+" Pizza (Calabresa)= "+p2*20+" reais<br>");
+					total=total+p2*20;
+				}
+				if (p3>0){
+					document.write(+p3+" Pizza (Frango)="+p3*20+" reais<br>");
+					total=total+p3*20;
+				}
+				if (p4>0){
+					document.write(+p4+" Pizza (Portuguesa)= "+p4*25+" reais<br>");
+					total=total+p4*25;
+				}
+				if (m1>0){
+					document.write(+m1+" Chocolate= "+m1*12+" reais<br>");
+					total=total+p1*12;
+				}
+				if (m2>0){
+					document.write(+m2+" Morango= "+m2*12+" reais<br>");
+					total=total+m2*12;
+				}
+				if (m3>0){
+					document.write(+m3+" Leite Ninho c/ Nutela= "+m3*15+" reais<br>");
+					total=total+m3*15;
+				}
+				document.write("<br>Valor final = "+total+" reais.");
+			}
+		}while(menu1!=6);
+	</script>
+</body>
+</html>
